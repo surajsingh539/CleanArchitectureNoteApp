@@ -1,9 +1,18 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal() // Good to include for plugins
+    }
+}
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        // REMOVE jcenter() from here
+        // maven { url 'https://jitpack.io' } // Add this if any of your dependencies (not plugins) rely on JitPack
     }
 }
 rootProject.name = "CleanArchitectureNoteApp"
