@@ -42,14 +42,14 @@ jobs:
 
       - name: 📦 Upload test reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: test-report
           path: app/build/reports/tests/
 
       - name: 📦 Upload debug APK
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
